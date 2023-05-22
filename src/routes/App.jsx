@@ -37,7 +37,7 @@ function App() {
         <>
             <Header icon={true} title={`${network} Codes`}/>
             <div className="p-5">
-                <ul className="">
+                <ul className="grid gap-5">
                     {data && <UssdList data={data}/>}
                 </ul>
             </div>
