@@ -9,7 +9,7 @@ function List({ data }) {
                 <p className="text-gray-500 text-sm">{data.code}</p>
             </div>
 
-            <a href={`tel:${data.code}`} className="text-[#010c80] p-2">
+            <a href={`tel:${data.code.replaceAll("#", "%23")}`} className="text-[#010c80] p-2">
                 <IoCall size={20} />
             </a>
         </li>
