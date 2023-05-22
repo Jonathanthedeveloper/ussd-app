@@ -1,26 +1,38 @@
 {
   "mtn": [
     {
-      "code": "*556#",
-      "title": "Buy data"
+      "code": "*312#",
+      "title": "Data Plans"
+    },
+    {
+      "code": "*311#",
+      "title": "Airtime Recharge"
+    },
+    {
+      "code": "*303#",
+      "title": "Borrow Airtime"
+    },
+    {
+      "code": "*310#",
+      "title": "Check Account"
+    },
+    {
+      "code": "*323#",
+      "title": "Data Balance"
+    },
+    {
+      "code": "*321#",
+      "title": "Share Data"
+    },
+    {
+      "code": "*305#",
+      "title": "VAS"
     }
   ],
   "glo": [
-    {
-      "code": "*556#",
-      "title": "Buy data"
-    }
   ],
   "9mobile": [
-    {
-      "code": "*556#",
-      "title": "Buy data"
-    }
   ],
   "airtel": [
-    {
-      "code": "*556#",
-      "title": "Buy data"
-    }
   ]
 }
