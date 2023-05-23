@@ -6,6 +6,15 @@ body {
     @apply bg-white;
 }
 
+#overlay {
+    background-color: rgba(0,0,0,.5);
+}
+
+form.add-new {
+    transition: opacity 5ms ease .2s,
+    transform .5s ease 0s;
+}
+
 /*
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

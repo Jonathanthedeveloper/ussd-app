@@ -1,11 +1,15 @@
+/* eslint-disable react/prop-types */
+
 import List from "./List.jsx";
 function UssdList ({data}) {
     return (
-        data.map((datum, index) => {
-            return (
-                <List key={index} data={datum}/>
-            )
-        })
+        <ul className="grid gap-5">
+            {data.map((datum, index) => {
+                return (
+                    <List key={index} data={datum}/>
+                )
+            })}
+        </ul>
     )
 }
 
