@@ -1,8 +1,8 @@
-// import {useRouter} from "react-router"
-import {useNavigate} from "react-router";
-import PropTypes from "prop-types";
+/* eslint-disable react/prop-types */
 
-// eslint-disable-next-line react/prop-types
+import {useNavigate} from "react-router";
+
+
 function MenuButton({label, children, to}) {
 
     const navigate = useNavigate()
@@ -22,11 +22,5 @@ function MenuButton({label, children, to}) {
     )
 }
 
-
-MenuButton.PropTypes = {
-        label: PropTypes.string,
-        children: PropTypes.node,
-        to: PropTypes.string
-}
 
 export default MenuButton;

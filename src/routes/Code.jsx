@@ -1,11 +1,13 @@
-import Header from "../components/Header.jsx";
+/* eslint-disable react/prop-types */
 
+import Header from "../components/Header.jsx";
 import {useParams} from "react-router";
 import {useEffect, useState} from "react";
 import UssdList from "../components/UssdList.jsx";
 
 
-function App() {
+
+function Code({activeTab, setActiveTab}) {
 
     const {network} = useParams();
     const [data, setData] = useState(null);
@@ -26,6 +28,9 @@ function App() {
                }
 
            })
+           .catch(error => {
+               alert(error.message)
+           })
 
 
 
@@ -35,15 +40,14 @@ function App() {
 
     return (
         <>
-            <Header icon={true} title={`${network} Codes`}/>
+            <Header icon={true} title={`${network} Codes`} setActiveTab={setActiveTab} activeTab={activeTab}/>
+
             <div className="p-5">
-                <ul className="grid gap-5">
                     {data && <UssdList data={data}/>}
-                </ul>
             </div>
 
         </>
     )
 }
 
-export default App
+export default Code

@@ -1,23 +1,13 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
+import React from "react";
 import './index.css'
-import App from "./routes/App.jsx";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Dashboard from "./routes/Dashboard.jsx";
+import App from './App'
+import ToastProvider from "./Providers/ToastProvider.jsx";
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Dashboard/>
-    },
-    {
-        path: "/:network",
-        element: <App/>
-    }
-])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router}/>
+        <ToastProvider/>
+        <App/>
     </React.StrictMode>,
 )

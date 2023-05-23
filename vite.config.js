@@ -20,6 +20,9 @@ export default defineConfig({
             manifest : Manifest
         }),
     ],
+    optimizeDeps: {
+        exclude: ['js-big-decimal']
+    }
 })
 
 

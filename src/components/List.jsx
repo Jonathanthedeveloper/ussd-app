@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
+
 import { IoCall } from "react-icons/all.js";
-import PropTypes from "prop-types";
 
 function List({ data }) {
     return (
@@ -16,11 +17,5 @@ function List({ data }) {
     );
 }
 
-List.propTypes = {
-    data: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        code: PropTypes.string.isRequired,
-    }).isRequired,
-};
 
 export default List;

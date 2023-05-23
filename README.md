@@ -6,7 +6,7 @@
 
 ## Overview
 
-The USSD Code PWA is a Progressive Web App that simplifies access to USSD codes by providing a user-friendly catalog of
+The USSD Code PWA is a Progressive Web Code that simplifies access to USSD codes by providing a user-friendly catalog of
 available codes. Users can browse through the catalog, search for specific codes, and easily copy them to their device's
 clipboard. This project aims to enhance the accessibility and convenience of USSD services for users.
 
