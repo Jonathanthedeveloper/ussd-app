@@ -43,7 +43,7 @@ function Code({activeTab, setActiveTab}) {
             <Header icon={true} title={`${network} Codes`} setActiveTab={setActiveTab} activeTab={activeTab}/>
 
             <div className="p-5">
-                    {data && <UssdList data={data}/>}
+                    {data && <UssdList data={data} />}
             </div>
 
         </>

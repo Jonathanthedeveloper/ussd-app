@@ -3,18 +3,20 @@
 import UssdList from "./UssdList.jsx";
 import {useEffect, useState} from "react";
 import Fab from "./Fab.jsx";
-import useNewCode from "../hooks/useNewCode.js";
+import useFormModal from "../hooks/useFormModal.js";
 import NewCodeForm from "./modals/NewCodeForm.jsx";
 import Overlay from "./Overlay.jsx";
 import {AiOutlinePlus} from "react-icons/ai";
+import EditCodeForm from "./modals/EditCodeForm.jsx";
 
 
 function SavedCodes({activeTab}) {
 
     const [savedCodes, setSavedCodes] = useState([])
 
-    const {active, toggleActive} = useNewCode();
-
+    const {
+        newFormActive, toggleNewFormActive, editFormActive, toggleEditFormActive, defaultFormValue,
+    } = useFormModal();
 
     useEffect(function () {
         const data = JSON.parse(localStorage.getItem("saved_codes")) || []
@@ -22,21 +24,33 @@ function SavedCodes({activeTab}) {
     }, []);
 
 
-    return (
-        <section
-            className={` w-full absolute ${activeTab === 2 ? "block" : "hidden"} p-5 transition`}>
-            <div>
-                <UssdList data={savedCodes}/>
-            </div>
+    return (<section
+        className={` w-full absolute ${activeTab === 2 ? "block" : "hidden"} p-5 transition`}>
+        <div>
+            <UssdList data={savedCodes} label="user" action={toggleEditFormActive}/>
 
-            <NewCodeForm active={active} action={toggleActive} updateState={setSavedCodes}/>
+        </div>
 
-            <Fab action={toggleActive}>
-                <AiOutlinePlus/>
-            </Fab>
-            <Overlay active={active} action={toggleActive}/>
-        </section>
-    )
+        <NewCodeForm
+            active={newFormActive}
+            action={toggleNewFormActive}
+            updateSavedCodes={setSavedCodes}
+        />
+
+        <EditCodeForm
+            active={editFormActive}
+            action={toggleEditFormActive} updateSavedCodes={setSavedCodes} defaultFormValue={defaultFormValue}
+        />
+
+        <Fab action={toggleNewFormActive}
+             standby={editFormActive}
+        >
+            <AiOutlinePlus/>
+        </Fab>
+
+        <Overlay active={newFormActive || editFormActive}
+                 action={newFormActive ? toggleNewFormActive : toggleEditFormActive}/>
+    </section>)
 }
 
 export default SavedCodes;
