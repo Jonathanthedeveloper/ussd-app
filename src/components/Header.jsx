@@ -4,6 +4,14 @@ import {BiArrowBack} from "react-icons/bi";
 import {useNavigate, useParams} from "react-router-dom";
 
 
+/**
+ * This Is the Header component displayed at the top of the page
+ * @param {string} title
+ * @param {number} activeTab
+ * @param {function} setActiveTab
+ * @returns {JSX.Element} Header
+ * @constructor
+ */
 function Header({title, activeTab, setActiveTab}) {
     const navigate = useNavigate();
     const {network} = useParams();
