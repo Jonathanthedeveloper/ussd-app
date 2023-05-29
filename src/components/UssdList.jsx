@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import List from "./List.jsx";
+import {memo} from "react";
 
 /**
  * Returns a bunch of li's wrapped in a ul tag
@@ -12,7 +13,8 @@ import List from "./List.jsx";
  * @returns {JSX.Element} List
  * @constructor
  */
-function UssdList({data, label = "system", action}) {
+// eslint-disable-next-line react/display-name
+const UssdList = memo(({data, label = "system", action}) => {
     return (
         <ul className="grid gap-5">
             {data.map((datum, index) => {
@@ -22,6 +24,5 @@ function UssdList({data, label = "system", action}) {
             })}
         </ul>
     )
-}
-
+})
 export default UssdList

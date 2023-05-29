@@ -27,7 +27,6 @@ function EditCodeForm({active, action, updateSavedCodes, defaultFormValue}) {
         // update state, clear form and close the form
         updateSavedCodes(previousData);
         reset();
-
         action();
 
         toast.success("USSD Code updated successfully")

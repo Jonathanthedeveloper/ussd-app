@@ -15,11 +15,23 @@ export default defineConfig({
             devOptions: {
                 enabled: true
             },
-            manifest : Manifest
+            manifest: Manifest,
+            includeAssets: [
+                '/data.json', // Add the path to your JSON file
+            ],
+            strategies: [
+                {
+                    urlPattern: /\.(json)$/,
+                    strategy: 'cacheFirst',
+                    cacheName: 'data',
+                }]
         }),
     ],
     optimizeDeps: {
         exclude: ['js-big-decimal']
+    },
+    build: {
+        sourcemap: true,
     }
 })
 
