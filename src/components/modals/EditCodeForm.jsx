@@ -34,7 +34,8 @@ function EditCodeForm({active, action, updateSavedCodes, defaultFormValue}) {
 
     }
 
-    function cancel() {
+    function cancel(e) {
+        e.preventDefault()
         reset();
         action();
     }
