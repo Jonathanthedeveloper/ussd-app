@@ -1,13 +1,13 @@
-# Contributing to USSD Code PWA
+# Contributing to Codee
 
-🎉 Thank you for considering contributing to the USSD Code PWA! 🎉
+🎉 Thank you for considering contributing to the Codee! 🎉
 
 We welcome contributions from the community to help improve and enhance the project. By following these guidelines, you
 can contribute effectively and ensure a smooth collaboration process.
 
 ## Ways to Contribute
 
-There are several ways you can contribute to the USSD Code PWA:
+There are several ways you can contribute to the Codee:
 
 - **Reporting Bugs:** If you encounter any bugs or issues while using the PWA, please submit a detailed bug report,
   including steps to reproduce the issue and any relevant information.
@@ -23,7 +23,7 @@ There are several ways you can contribute to the USSD Code PWA:
 
 ## Getting Started
 
-To contribute to the USSD Code PWA, follow these steps:
+To contribute to the Codee, follow these steps:
 
 1. Fork the repository to your GitHub account.
 
@@ -68,7 +68,7 @@ suggestions from the maintainers and other contributors.
 
 ## License
 
-By contributing to the USSD Code PWA, you agree that your contributions will be licensed under the same LICENSE as the
+By contributing to the Codee, you agree that your contributions will be licensed under the same LICENSE as the
 project.
 
 ## Contact
@@ -79,5 +79,5 @@ If you have any questions or need further assistance, feel free to reach out to 
 
 **Issue Tracker:** https://github.com/Jonathanthedeveloper/ussd-app/issues
 
-Thank you for your interest in contributing to the USSD Code PWA! We appreciate your support and look forward to your
+Thank you for your interest in contributing to the Codee! We appreciate your support and look forward to your
 contributions.
